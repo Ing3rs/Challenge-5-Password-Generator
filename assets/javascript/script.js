@@ -88,18 +88,68 @@ var upperCasedCharacters = [
   'Z'
 ];
 
+/* 
+  PROMPTS: 
+  --------
+  How many character would you like your passowrd to contain?
+
+    if user enters < 10 or > 128: 
+      Password must be at least 10 characters
+      Password must be less than 129 characters
+
+  Would you like to include special characters?
+  Would you like to include uppercase letters?
+  Would you like to include lowercase letters?
+  Would you like to include numbers?
+
+    If user chooses at least one option above: 
+      Closes box, generates passsword in field on webpage
+
+    If user selects cancel to all options prompt: 
+      You must select at least one character type
+
+
+  NOTES
+  -----
+  > Use confirm prompt for ok/cancel
+
+  > At least one of the character type options should be selected in order for a password to be generated
+  
+  > The bulk of the code should be in function generatePassword section
+
+*/
+
+
 // Function to prompt user for password options
 function getPasswordOptions() {
+
+  // MY CODE
+
+
+
+  // END OF MY CODE
 
 }
 
 // Function for getting a random element from an array
 function getRandom(arr) {
 
+  // MY CODE
+
+  
+
+  // END OF MY CODE
+
 }
 
 // Function to generate password with user input
 function generatePassword() {
+
+  // MY CODE
+
+  
+
+  // END OF MY CODE
 
 }
 
