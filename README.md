@@ -24,7 +24,7 @@ The password generator should:
 
 ## Final Project Links
 
-* Deployed portfolio: https://ing3rs.github.io/challenge-5-Password-Generator
+* Deployed portfolio: https://ing3rs.github.io/Challenge-5-Password-Generator/
 * GitHub repository: https://github.com/Ing3rs/Challenge-5-Password-Generator
 
 ## Final Project Preview
