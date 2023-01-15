@@ -114,7 +114,7 @@ var upperCasedCharacters = [
   > Use confirm prompt for ok/cancel
 
   > At least one of the character type options should be selected in order for a password to be generated
-  
+
   > The bulk of the code should be in function generatePassword section
 
 */
@@ -125,18 +125,66 @@ function getPasswordOptions() {
 
   // MY CODE
 
+  var userInput = prompt("How many character would you like your passowrd to contain?");
 
+  // check user input is between 10 - 128 (continue if true and restart if false)
+  if (userInput < 10) {
+    confirm("Password must be at least 10 characters");
+    return;
 
-  // END OF MY CODE
+  } else if (userInput > 128) {
+    confirm("Password must be less than 129 characters");
+    return;
+
+  } else {
+
+    var userSpecialCharacter = confirm("Would you like to include special characters?");
+
+    var userUpperCase = confirm("Would you like to include uppercase letters?");
+
+    var userLowerCase = confirm("Would you like to include lowercase letters?");
+
+    var userNumbers = confirm("Would you like to include numbers?");
+
+    // check if at least one character type is true:
+    if (userSpecialCharacter === false &&
+      userUpperCase === false &&
+      userLowerCase === false &&
+      userSpecialCharacter === false) {
+
+      // user must restart is all are false
+      confirm("You must select at least one character type");
+      return;
+
+      // if at least one is true, generate password
+    } else {
+      generatePassword();
+    }
+  }
 
 }
 
+// start prompts
+getPasswordOptions();
+
+// END OF MY CODE
+
+
 // Function for getting a random element from an array
-function getRandom(arr) {
+
+function getRandom(i, arr) {
 
   // MY CODE
+  var userPassword = 0;
 
-  
+  if (i === true) {
+
+    arr[Math.floor(Math.random() * userInput.length)]
+    userPassword.push();
+
+  } else {
+    return;
+  }
 
   // END OF MY CODE
 
@@ -146,8 +194,12 @@ function getRandom(arr) {
 function generatePassword() {
 
   // MY CODE
-
+  var finalPassword = 0;
+  var special = 0;
   
+  finalPassword = getRandom(getPasswordOptions.userSpecialCharacter, specialCharacters)
+  special.push(finalPassword);
+
 
   // END OF MY CODE
 
