@@ -119,89 +119,108 @@ var upperCasedCharacters = [
 
 */
 
+var passwordLength = 0;
+var userPassword = [""];
+var finalPassword = [""];
+
 
 // Function to prompt user for password options
 function getPasswordOptions() {
 
-  // MY CODE
 
-  var userInput = prompt("How many character would you like your passowrd to contain?");
+  passwordLength = prompt("How many character would you like your password to contain?");
 
   // check user input is between 10 - 128 (continue if true and restart if false)
-  if (userInput < 10) {
+
+  if (passwordLength < 10) {
     confirm("Password must be at least 10 characters");
     return;
 
-  } else if (userInput > 128) {
+  } else if (passwordLength > 129) {
     confirm("Password must be less than 129 characters");
     return;
 
+  // } else if (passwordLength = isNaN) {
+  //   confirm("Please enter a number between 10 - 128");
+  //   return;
+
+  // continue prompts
+
   } else {
 
-    var userSpecialCharacter = confirm("Would you like to include special characters?");
+    // include special characters?
 
-    var userUpperCase = confirm("Would you like to include uppercase letters?");
+    var hasSpecialCharacter = confirm("Would you like to include special characters?");
 
-    var userLowerCase = confirm("Would you like to include lowercase letters?");
+    if (hasSpecialCharacter) {
+      userPassword += specialCharacters.join("");
+    }
 
-    var userNumbers = confirm("Would you like to include numbers?");
+    // include upper case characters?
+
+    var hasUpperCase = confirm("Would you like to include uppercase letters?");
+
+    if (hasUpperCase) {
+      userPassword += upperCasedCharacters.join("");
+    }
+
+    // include lower case characters?
+
+    var hasLowerCase = confirm("Would you like to include lowercase letters?");
+
+    if (hasLowerCase) {
+      userPassword += lowerCasedCharacters.join("");
+    }
+
+    // include numbers?
+
+    var hasNumbers = confirm("Would you like to include numbers?");
+
+    if (hasNumbers) {
+      userPassword += numericCharacters.join("");
+    }
+
 
     // check if at least one character type is true:
-    if (userSpecialCharacter === false &&
-      userUpperCase === false &&
-      userLowerCase === false &&
-      userSpecialCharacter === false) {
+
+    if (hasSpecialCharacter === false &&
+      hasUpperCase === false &&
+      hasLowerCase === false &&
+      hasSpecialCharacter === false) {
 
       // user must restart is all are false
+
       confirm("You must select at least one character type");
       return;
 
-      // if at least one is true, generate password
-    } else {
-      generatePassword();
     }
+
   }
 
 }
-
-// start prompts
-getPasswordOptions();
-
-// END OF MY CODE
 
 
 // Function for getting a random element from an array
 
-function getRandom(i, arr) {
-
-  // MY CODE
-  var userPassword = 0;
-
-  if (i === true) {
-
-    arr[Math.floor(Math.random() * userInput.length)]
-    userPassword.push();
-
-  } else {
-    return;
-  }
-
-  // END OF MY CODE
+function getRandom(arr) {
+  
+  return arr[Math.floor(Math.random() * arr.length)];
 
 }
+
 
 // Function to generate password with user input
 function generatePassword() {
 
-  // MY CODE
-  var finalPassword = 0;
-  var special = 0;
-  
-  finalPassword = getRandom(getPasswordOptions.userSpecialCharacter, specialCharacters)
-  special.push(finalPassword);
+  getPasswordOptions();
 
+  for (i = 0; i < passwordLength; i++ ) {
 
-  // END OF MY CODE
+    finalPassword += getRandom(userPassword)
+
+  }
+
+  return finalPassword;
 
 }
 
