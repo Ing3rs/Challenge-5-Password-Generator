@@ -88,36 +88,8 @@ var upperCasedCharacters = [
   'Z'
 ];
 
-/* 
-  PROMPTS: 
-  --------
-  How many character would you like your passowrd to contain?
 
-    if user enters < 10 or > 128: 
-      Password must be at least 10 characters
-      Password must be less than 129 characters
-
-  Would you like to include special characters?
-  Would you like to include uppercase letters?
-  Would you like to include lowercase letters?
-  Would you like to include numbers?
-
-    If user chooses at least one option above: 
-      Closes box, generates passsword in field on webpage
-
-    If user selects cancel to all options prompt: 
-      You must select at least one character type
-
-
-  NOTES
-  -----
-  > Use confirm prompt for ok/cancel
-
-  > At least one of the character type options should be selected in order for a password to be generated
-
-  > The bulk of the code should be in function generatePassword section
-
-*/
+// define user input variables
 
 var passwordLength = 0;
 var userPassword = [""];
@@ -127,22 +99,17 @@ var finalPassword = [""];
 // Function to prompt user for password options
 function getPasswordOptions() {
 
-
   passwordLength = prompt("How many character would you like your password to contain?");
 
-  // check user input is between 10 - 128 (continue if true and restart if false)
+  // check user input is between 10 - 64 (continue if true and restart if false)
 
   if (passwordLength < 10) {
     confirm("Password must be at least 10 characters");
     return;
 
-  } else if (passwordLength > 129) {
-    confirm("Password must be less than 129 characters");
+  } else if (passwordLength > 65) {
+    confirm("Password must be less than 65 characters");
     return;
-
-  // } else if (passwordLength = isNaN) {
-  //   confirm("Please enter a number between 10 - 128");
-  //   return;
 
   // continue prompts
 
@@ -201,7 +168,6 @@ function getPasswordOptions() {
 
 
 // Function for getting a random element from an array
-
 function getRandom(arr) {
   
   return arr[Math.floor(Math.random() * arr.length)];

@@ -10,10 +10,11 @@ body,
   height: 100%;
   margin: 0;
   padding: 0;
+  background-image: url(../images/939716.png);
 }
 
 body {
-  font-family: sans-serif;
+  font-family: monospace;
   background-color: #f9fbfd;
 }
 
@@ -25,21 +26,27 @@ body {
 
 header {
   text-align: center;
-  padding: 20px;
-  padding-top: 0px;
-  color: hsl(206, 17%, 28%);
+  padding: 0px;
+  padding-bottom: 20px;
+  color: black;
 }
 
 .card {
   background-color: hsl(0, 0%, 100%);
-  border-radius: 5px;
-  border-width: 1px;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
-  color: hsl(206, 17%, 28%);
+  border-radius: 10px;
+  border: solid 3px black;
+  box-shadow: 0.3em 0.3em 0 0 #544c5f78;
+  color: black;
   font-size: 18px;
   margin: 0 auto;
   max-width: 800px;
   padding: 30px 40px;
+}
+
+#title-card {
+  font-size: 15px;
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
 
 .card-header::after {
@@ -73,20 +80,21 @@ header {
 }
 
 .btn {
-  border: none;
-  background-color: hsl(360, 91%, 36%);
-  border-radius: 25px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
-    0px;
-  color: hsl(0, 0%, 100%);
+  border: solid 3px black;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0.3em 0.3em 0 0 #a394be;
   display: inline-block;
   font-size: 22px;
+  font-family: monospace;
+  color: black;
   line-height: 22px;
   margin: 16px 16px 16px 20px;
   padding: 14px 34px;
   text-align: center;
   cursor: pointer;
 }
+
 
 button[disabled] {
   cursor: default;
