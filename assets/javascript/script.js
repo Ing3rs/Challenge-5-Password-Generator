@@ -153,7 +153,7 @@ function getPasswordOptions() {
     if (hasSpecialCharacter === false &&
       hasUpperCase === false &&
       hasLowerCase === false &&
-      hasSpecialCharacter === false) {
+      hasNumbers === false) {
 
       // user must restart is all are false
 
